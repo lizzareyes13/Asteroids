@@ -2,6 +2,7 @@
 
 import generateAsteroids from "./createAsteroids.js";
 import controls from "./controls.js";
+generateAsteroids();
 
 // THIS IS YOUR JAVASCRIPT DOCUMENT!
 
@@ -18,10 +19,16 @@ var ySpeed = 0;
 var maxSpeed = 5;
 
 // declare & initialize controller variables
-var upPressed = 0;
-var downPressed = 0;
-var leftPressed = 0;
-var rightPressed = 0;
+var ctrl = {
+  upPressed: 0,
+  downPressed: 0,
+  leftPressed: 0,
+  rightPressed: 0
+};
+
+
+controls(ctrl);
+
 
 
 
@@ -64,19 +71,19 @@ function gameLoop()
   document.getElementById('ship').style.top = yPosition;
 
   // change speed when user presses keys
-  if (upPressed == 1)
+  if (ctrl.upPressed == 1)
     ySpeed = Math.max(ySpeed - 1,-1*maxSpeed);
-  if (downPressed == 1)
+  if (ctrl.downPressed == 1)
     ySpeed = Math.min(ySpeed + 1,1*maxSpeed)
-  if (rightPressed == 1)
+  if (ctrl.rightPressed == 1)
     xSpeed = Math.min(xSpeed + 1,1*maxSpeed);
-  if (leftPressed == 1)
+  if (ctrl.leftPressed == 1)
     xSpeed = Math.max(xSpeed - 1,-1*maxSpeed);
 
   // deceleration
-  if (upPressed == 0 && downPressed == 0)
+  if (ctrl.upPressed == 0 && ctrl.downPressed == 0)
      slowDownY();
-  if (leftPressed == 0 && rightPressed == 0)
+  if (ctrl.leftPressed == 0 && ctrl.rightPressed == 0)
      slowDownX();
 
      // check position of ship on screen
@@ -131,5 +138,7 @@ function gameLoop()
      }
 
   // loop
-  setTimeout("gameLoop()",10);
+  setTimeout(gameLoop, 10);
 }
+
+gameLoop();

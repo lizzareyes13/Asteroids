@@ -20,7 +20,7 @@
 
         iv. Initialize your local version of the project as a node project (5pts)
 
-        <!-- v. Install browserify, watchify, and all the required transforms so that you can have a single code bundle output to a file named prod.js (ES6 to ES5 conversion not required) (10pts) -->
+        v. Install browserify, watchify, and all the required transforms so that you can have a single code bundle output to a file named prod.js (ES6 to ES5 conversion not required) (10pts)
 
         vi. The code is a bit messy, with many things in the same file. Modularize it by doing the following:
               a. Start by copying the contents of the codingIsFun.js file to a new file called main.js
