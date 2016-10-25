@@ -1,22 +1,11 @@
+//moved from codingIsFun.js
+
+import generateAsteroids from "./createAsteroids.js";
+import controls from "./controls.js";
+
 // THIS IS YOUR JAVASCRIPT DOCUMENT!
 
-// GENERATE ASTEROIDS IN HTML DOCUMENT
 
-for (var i = 0; i < 100; i++) {
-
-  var asteroid = new Image();
-  asteroid.id = "asteroid" + i.toString();
-  asteroid.src = "asteroid.png";
-  asteroid.style.height = (((Math.random() * 6) + 0)*30);
-  asteroid.style.position = "absolute";
-  asteroid.style.top = (((Math.random() * 6) + 0)*100);
-  asteroid.style.right = -200;
-  var asteroidPosition = asteroid.style.right;
-  var asteroidID = asteroid.id;
-
-  document.body.appendChild(asteroid);
-
-}
 
 
 // MOVEMENT CONTROLS FOR SHIP
@@ -35,31 +24,6 @@ var leftPressed = 0;
 var rightPressed = 0;
 
 
-function keyDown(playerKeyPress)
-{
-  var keyPressed = playerKeyPress.which;
-  if (keyPressed == 38)
-    upPressed = 1;
-  if (keyPressed == 40)
-    downPressed = 1;
-  if (keyPressed == 37)
-    leftPressed = 1;
-  if (keyPressed == 39)
-    rightPressed = 1;
-}
-
-function keyUp(playerKeyPress)
-{
-  var keyPressed = playerKeyPress.which;
-  if (keyPressed == 38)
-    upPressed = 0;
-  if (keyPressed == 40)
-    downPressed = 0;
-  if (keyPressed == 37)
-    leftPressed = 0;
-  if (keyPressed == 39)
-    rightPressed = 0;
-}
 
 function slowDownX()
 {

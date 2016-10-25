@@ -1,0 +1,31 @@
+{
+  "name": "Asteroids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "artofasteroids": "node index.js",
+    "watch": "watchify JS/main.js -o js/prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizzareyes13/Asteroids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizzareyes13/Asteroids/issues"
+  },
+  "homepage": "https://github.com/lizzareyes13/Asteroids#readme",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "express": "^4.14.0",
+    "socket.io": "^1.5.1",
+    "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
